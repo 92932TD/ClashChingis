@@ -1,0 +1,2 @@
+room_goto(RoomPlayer2)
+instance_destroy(oGameBlue)

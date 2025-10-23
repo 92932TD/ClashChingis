@@ -1,0 +1,35 @@
+if room = RoomPlayer1 {
+hp = 4392
+max_hp = 4392
+range = 450;
+id_network = id
+atk_interval = 60;
+base_atk = atk_interval
+dmg = 109
+is_network_clone = false
+target = noone;
+isRed = false
+isBuilding = true;
+isActive = false;
+image_speed = 0;
+} else {
+	hp = 4392
+max_hp = 4392
+range = 450;
+id_network = id
+atk_interval = 60;
+base_atk = atk_interval
+dmg = 109
+target = noone;
+isRed = true
+sprite_index = sRedKing
+isBuilding = true;
+isActive = false;
+image_speed = 0;
+}
+last_shot_time = 0
+cooldown = false
+isfromtower = true
+isTower = true
+stored_x = x
+stored_y = y

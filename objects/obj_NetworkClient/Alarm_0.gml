@@ -1,0 +1,1 @@
+log_message("Attempting to connect to server...");
