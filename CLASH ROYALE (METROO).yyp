@@ -193,6 +193,7 @@
     {"id":{"name":"sBlueKing","path":"sprites/sBlueKing/sBlueKing.yy",},},
     {"id":{"name":"sBluePrincess","path":"sprites/sBluePrincess/sBluePrincess.yy",},},
     {"id":{"name":"sEnemyPrincess","path":"sprites/sEnemyPrincess/sEnemyPrincess.yy",},},
+    {"id":{"name":"oChadwick","path":"objects/oChadwick/oChadwick.yy",},},
     {"id":{"name":"sHogRider","path":"sprites/sHogRider/sHogRider.yy",},},
     {"id":{"name":"sKnight","path":"sprites/sKnight/sKnight.yy",},},
     {"id":{"name":"sMusk","path":"sprites/sMusk/sMusk.yy",},},

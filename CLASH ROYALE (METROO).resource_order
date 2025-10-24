@@ -52,6 +52,7 @@
     {"name":"sFireball","order":3,"path":"sprites/sFireball/sFireball.yy",},
     {"name":"Sound46","order":7,"path":"sounds/Sound46/Sound46.yy",},
     {"name":"oBlueCannon","order":1,"path":"objects/oBlueCannon/oBlueCannon.yy",},
+    {"name":"oChadwick","order":5,"path":"objects/oChadwick/oChadwick.yy",},
     {"name":"sMegaknight","order":4,"path":"sprites/sMegaknight/sMegaknight.yy",},
     {"name":"Sound41","order":2,"path":"sounds/Sound41/Sound41.yy",},
   ],
