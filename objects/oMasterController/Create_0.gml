@@ -31,7 +31,8 @@ global.cards_all = [
 	{ obj: oSkeletons , sprite: sSkeletonInHAnd, cost: 1, type: "troop",num: 3},
 	{ obj: oSkeletons, sprite: sSkarmy, cost: 3, type: "troop",num: 15},
 	{ obj: oBlueElixirGen, sprite: sElixirPump, cost: 6, type: "troop",num: 1},
-	{obj: oChadwick, sprite: sChadwick, cost: 11, type: "troop", num: 1 }
+	{obj: oChadwick, sprite: sChadwick, cost: 11, type: "troop", num: 1 },
+	{obj: oGiant, sprite: sGiantInHand, cost: 5, type: "troop", num: 1}
 ];
 } else if global.isRed {
 	global.cards_all = [
@@ -49,7 +50,8 @@ global.cards_all = [
 	{ obj: oRedSkeletons, sprite: sSkeletonInHAnd, cost: 1, type: "troop",num: 3},
 	{ obj: oRedSkeletons, sprite: sSkarmy, cost: 3, type: "troop",num: 15},
 	{obj: oRedElixirGen, sprite: sElixirPump, cost: 6, type: "troop", num: 1},
-	{obj: oRedChadwick, sprite: sChadwick, cost: 11, type: "troop", num: 1 }
+	{obj: oRedChadwick, sprite: sChadwick, cost: 11, type: "troop", num: 1 },
+	{obj: oRedGiant, sprite: sGiantInHand, cost: 5, type: "troop", num: 1}
 	
 ];
 }
