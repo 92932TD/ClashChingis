@@ -86,6 +86,7 @@
     {"id":{"name":"Sound40","path":"sounds/Sound40/Sound40.yy",},},
     {"id":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},},
     {"id":{"name":"obj_NetworkClient","path":"objects/obj_NetworkClient/obj_NetworkClient.yy",},},
+    {"id":{"name":"oMirror","path":"objects/oMirror/oMirror.yy",},},
     {"id":{"name":"oRedGiant","path":"objects/oRedGiant/oRedGiant.yy",},},
     {"id":{"name":"obj_NetworkController","path":"objects/obj_NetworkController/obj_NetworkController.yy",},},
     {"id":{"name":"oBlueArrow","path":"objects/oBlueArrow/oBlueArrow.yy",},},

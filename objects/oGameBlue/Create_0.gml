@@ -3,7 +3,7 @@ global.redkingdead = false;
 global.bluekingdead = false;
 global.bluetowerslost = 0;
 global.redtowerslost = 0;
-
+prevcard = noone
 randomize();
 show_debug_message("debug");
 

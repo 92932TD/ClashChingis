@@ -17,6 +17,7 @@ if (selected_card != -1) {
 
         global.elixir -= card_data.cost;
         show_debug_message("deployed troop: " + string(card_data.obj));
+		
 
         if (array_length(cards_available) == 0) {
             cards_available = array_shuffle(discard_pile);
@@ -33,9 +34,10 @@ if (selected_card != -1) {
 
         array_push(discard_pile, card_data);
         selected_card = -1;
+		
     }
 
-    // --- Spell placement ---
+  
     else if (card_data.type == "spell" && mouse_y < 1800) {
         if (card_data.obj == oBlueArrow) {
             arrow_spell(mouse_x, mouse_y, arrowradius, arrowdmg, arrowtowerdmg);
