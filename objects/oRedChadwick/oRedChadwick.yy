@@ -1,19 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oChadwick",
+  "name": "oRedChadwick",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Blue",
-    "path": "folders/Objects/Blue.yy",
+    "name": "Red",
+    "path": "folders/Objects/Red.yy",
   },
   "parentObjectId": {
-    "name": "BlueParent",
-    "path": "objects/BlueParent/BlueParent.yy",
+    "name": "RedParent",
+    "path": "objects/RedParent/RedParent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
