@@ -36,3 +36,4 @@ isfromtower = true
 isTower = true
 stored_x = x
 stored_y = y
+istargetable = true

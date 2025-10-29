@@ -1,3 +1,4 @@
+istargetable = true
 hp = 12000;
 max_hp = hp;
 id_network = id

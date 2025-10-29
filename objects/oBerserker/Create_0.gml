@@ -1,4 +1,4 @@
-
+istargetable = true
 grid_size = 15
 hp = 896;
 max_hp = hp;

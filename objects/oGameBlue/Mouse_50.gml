@@ -40,9 +40,9 @@ if (selected_card != -1) {
   
     else if (card_data.type == "spell" && mouse_y < 1800) {
         if (card_data.obj == oBlueArrow) {
-            arrow_spell(mouse_x, mouse_y, arrowradius, arrowdmg, arrowtowerdmg);
+            arrow_spell(mouse_x, mouse_y, arrowradius, arrowdmg, arrowtowerdmg, arrowspeed);
         } else if (card_data.obj == oFireball) {
-            arrow_spell(mouse_x, mouse_y, fireballradius, fireballdmg, fireballtowerdmg);
+            arrow_spell(mouse_x, mouse_y, fireballradius, fireballdmg, fireballtowerdmg, fireballspeed);
         }
 
         global.elixir -= card_data.cost;

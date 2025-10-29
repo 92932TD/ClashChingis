@@ -1,3 +1,4 @@
+istargetable = true
 last_shot_time = 0
 cooldown = false
 if room = RoomPlayer1 {

@@ -10,7 +10,7 @@ if 1 = 1 {
 	var nearesttarget = noone
 with (RedParent) {
 	
-    if id != other.id{
+    if id != other.id && istargetable{
         var d = point_distance(x, y, other.x, other.y);
         if d < dist && d != 0 {
             dist = d;

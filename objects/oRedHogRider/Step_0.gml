@@ -13,7 +13,7 @@ if 1 = 1 {
 	var nearesttarget = noone
 with (BlueParent) {
 	
-    if id != other.id && isBuilding{
+    if id != other.id && isBuilding && istargetable{
         var d = point_distance(x, y, other.x, other.y);
         if d < dist && d != 0 {
             dist = d;

@@ -6,7 +6,7 @@ if (jump_cooldown_timer > 0) jump_cooldown_timer -= 1;
 var dist = 100000;
 var nearesttarget = noone;
 with (BlueParent) {
-    if id != other.id {
+    if id != other.id && istargetable{
         var d = point_distance(x, y, other.x, other.y);
         if d < dist && d != 0 {
             dist = d;

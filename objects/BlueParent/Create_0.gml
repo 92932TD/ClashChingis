@@ -14,6 +14,7 @@ isBuilding = false;
 isRed = false
 grid_size = 15;
 spd = 2;
+istargetable = true
 path_grid = mp_grid_create(
     0,
     0,

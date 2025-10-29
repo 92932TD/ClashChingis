@@ -1,3 +1,5 @@
+istargetable = true
+
 isFromTower = true
 if room = RoomPlayer1 {
 hp = 4392

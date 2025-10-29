@@ -1,5 +1,5 @@
 
-
+istargetable = true
 hp = 1070
 max_hp = 1070
 range = 330; //561

@@ -1,4 +1,4 @@
-
+istargetable = true
 
 hp = 824
 max_hp = 824

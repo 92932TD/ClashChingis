@@ -1,3 +1,5 @@
+
+istargetable = true
 hp = 81;
 max_hp = hp;
 id_network = id

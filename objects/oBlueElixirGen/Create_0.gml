@@ -1,4 +1,4 @@
-
+istargetable = true
 
 hp = 1070
 max_hp = 1070

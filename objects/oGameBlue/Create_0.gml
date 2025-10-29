@@ -24,6 +24,8 @@ arrowdmg = 366
 fireballtowerdmg = 207
 fireballdmg = 688
 fireballradius = 150
+arrowspeed = 0.03
+fireballspeed = 0.02
 
 
 

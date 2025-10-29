@@ -115,20 +115,24 @@ if (type == network_type_data) {
     var radius = buffer_read(buffer_in, buffer_f32);
     var damage = buffer_read(buffer_in, buffer_s32);
     var towerdamage = buffer_read(buffer_in, buffer_s32);
-
+	var spd = buffer_read(buffer_in, buffer_f32);
+show_debug_message("SPD of buffer: " + string(spd))
     var reflected_yy = room_height - 240 - yy;
 
-    with (BlueParent) {
-		show_debug_message("With blue parent triggered")
-        if (point_distance(x, y, xx, reflected_yy) <= 210) {
-			show_debug_message("card within radius")
-            if (variable_instance_exists(id, "isTower") && isTower) {
-                hp -= towerdamage;
-            } else {
-                hp -= damage;
-            }
-        }
-    }
+     var proj = instance_create_layer(480, 1620, "Instances", oRedProjectile);
+    proj.start_x = 480
+    proj.start_y = 150;
+    proj.target_x = xx
+	proj.spd = spd
+    proj.target_y = reflected_yy
+    proj.radius = radius;
+    proj.damage = damage;
+    proj.towerdamage = towerdamage;
+	if radius = 150 { 
+		proj.sprite_index = sFireball
+	} else if radius = 210 {
+		proj.sprite_index = sBlueArrowInHand
+	}
 }
 
 }

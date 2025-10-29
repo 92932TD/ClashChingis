@@ -1,3 +1,4 @@
+istargetable = true
 lifespan = 0.46
 
 hp = 824

@@ -1,3 +1,4 @@
+istargetable = true
 if room = RoomPlayer1 {
 hp = 4392
 max_hp = 4392

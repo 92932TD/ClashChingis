@@ -12,7 +12,7 @@ var dist = range
   with (BlueParent) {
 	   
 
-    if id != other.id && isRed != other.isRed {
+    if id != other.id && isRed != other.isRed && istargetable {
         var d = point_distance(x, y, other.x, other.y);
         if d < dist && d != 0 {
             dist = d;

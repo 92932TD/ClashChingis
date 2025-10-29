@@ -1,3 +1,4 @@
+istargetable = true
 hp = 3760;
 max_hp = hp;
 dmg = 816;
