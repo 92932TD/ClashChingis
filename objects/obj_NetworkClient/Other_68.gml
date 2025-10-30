@@ -90,6 +90,39 @@ if (type == network_type_data) {
         
     }
 }
+if (command == 670) {
+    var proj_id = buffer_read(buffer_in, buffer_s32);
+    var px = buffer_read(buffer_in, buffer_s32);
+    var py = buffer_read(buffer_in, buffer_s32);
+    var target_id = buffer_read(buffer_in, buffer_s32);
+    var dmg = buffer_read(buffer_in, buffer_s32);
+    var owner_isRed = buffer_read(buffer_in, buffer_u8);
+var reflected_py = room_height -240 - new_y 
+    // Find existing projectile instance
+    var proj_inst = noone;
+    var count = instance_number(oProjectile);
+    for (var i = 0; i < count; i++) {
+        var inst = instance_find(oProjectile, i);
+        if (variable_instance_exists(inst, "id_network") && inst.id_network == proj_id) {
+            proj_inst = inst;
+            break;
+        }
+    }
 
+   
+    if (!instance_exists(proj_inst)) {
+        proj_inst = instance_create_layer(px, py, "Instances", oProjectile);
+        proj_inst.id_network = proj_id;
+        proj_inst.is_network_clone = true;
+    }
+
+  
+    proj_inst.x = px;
+    proj_inst.y = reflected_py;
+    proj_inst.target_id = target_id;
+    
+}
+
+ 
     } 
 }

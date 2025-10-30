@@ -32,4 +32,15 @@ if (global.Client_Socket != -1) {
             }
         }
     }
+	 with (oProjectile) {
+        var buf = buffer_create(128, buffer_fixed, 1);
+
+        buffer_write(buf, buffer_u8, 670); 
+        buffer_write(buf, buffer_s32, id_network); 
+        buffer_write(buf, buffer_s32, x);
+        buffer_write(buf, buffer_s32, y);
+       
+        network_send_packet(global.Client_Socket, buf, buffer_tell(buf));
+        buffer_delete(buf);
+    }
 }
