@@ -4,7 +4,8 @@ global.song_list = [
     song_17, song_18, song_19, song_20, song_21, song_22, song_23, song_24,
     song_25, song_26, song_27, song_28, song_29, song_30, song_31, ukelele,
 	Sound33, Sound34, Sound35, Sound36, Sound37, Sound38, Sound39, Sound40, 
-	Sound41, Sound42, Sound43, Sound44, Sound45, Sound46, Sound47
+	Sound41, Sound42, Sound43, Sound44, Sound45, Sound46, Sound47, Sound48,
+	Sound49, Sound50, dieveryrough
 ];
 
 global.current_song = -1; 
@@ -31,7 +32,7 @@ global.cards_all = [
 	{ obj: oSkeletons , sprite: sSkeletonInHAnd, cost: 1, type: "troop",num: 3},
 	{ obj: oSkeletons, sprite: sSkarmy, cost: 3, type: "troop",num: 15},
 	{ obj: oBlueElixirGen, sprite: sElixirPump, cost: 6, type: "troop",num: 1},
-	{obj: oChadwick, sprite: sChadwick, cost: 11, type: "troop", num: 1 },
+	
 	{obj: oGiant, sprite: sGiantInHand, cost: 5, type: "troop", num: 1}
 ];
 } else if global.isRed {
@@ -50,7 +51,7 @@ global.cards_all = [
 	{ obj: oRedSkeletons, sprite: sSkeletonInHAnd, cost: 1, type: "troop",num: 3},
 	{ obj: oRedSkeletons, sprite: sSkarmy, cost: 3, type: "troop",num: 15},
 	{obj: oRedElixirGen, sprite: sElixirPump, cost: 6, type: "troop", num: 1},
-	{obj: oRedChadwick, sprite: sChadwick, cost: 11, type: "troop", num: 1 },
+	
 	{obj: oRedGiant, sprite: sGiantInHand, cost: 5, type: "troop", num: 1}
 	
 ];
