@@ -66,6 +66,8 @@ if (selected_card != -1 && cardsomething.type = "spell") {
     draw_circle(mouse_x, mouse_y, 210, false);
 	} else if cardsomething.obj = oFireball {
 		draw_circle(mouse_x, mouse_y, 150, false);
+	} else if cardsomething.obj = oRocket {
+		draw_circle(mouse_x, mouse_y, rocketradius, false);
 	}
 	
     draw_set_alpha(1);

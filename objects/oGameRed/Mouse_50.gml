@@ -41,7 +41,9 @@ if (selected_card != -1) {
             arrow_spellred(mouse_x, mouse_y, arrowradius, arrowdmg, arrowtowerdmg, arrowspeed);
         } else if (card_data.obj == oFireball) {
             arrow_spellred(mouse_x, mouse_y, fireballradius, fireballdmg, fireballtowerdmg, fireballspeed);
-        }
+        } else if (card_data.obj == oRocket) {
+            arrow_spell(mouse_x, mouse_y, rocketradius, rocketdmg, rockettowerdmg, rocketspeed);
+        } 
 
         global.elixir -= card_data.cost;
         show_debug_message("deployed spell: " + string(card_data.obj));

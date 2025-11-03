@@ -14,5 +14,6 @@ if (t >= 1) {
             }
         }
     }
+	show_debug_message("Destroyed projectile")
     instance_destroy();
 }

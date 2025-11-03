@@ -91,12 +91,12 @@ if (type == network_type_data) {
     }
 }
 if (command == 670) {
+	log_message("Recieved command 670")
     var proj_id = buffer_read(buffer_in, buffer_s32);
     var px = buffer_read(buffer_in, buffer_s32);
     var py = buffer_read(buffer_in, buffer_s32);
-    var target_id = buffer_read(buffer_in, buffer_s32);
-    var dmg = buffer_read(buffer_in, buffer_s32);
-    var owner_isRed = buffer_read(buffer_in, buffer_u8);
+    
+   
 var reflected_py = room_height -240 - new_y 
     // Find existing projectile instance
     var proj_inst = noone;

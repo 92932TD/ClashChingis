@@ -34,7 +34,7 @@ if (global.Client_Socket != -1) {
     }
 	 with (oProjectile) {
         var buf = buffer_create(128, buffer_fixed, 1);
-
+show_debug_message("Writing sum projectile code")
         buffer_write(buf, buffer_u8, 670); 
         buffer_write(buf, buffer_s32, id_network); 
         buffer_write(buf, buffer_s32, x);

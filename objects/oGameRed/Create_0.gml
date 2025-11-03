@@ -21,6 +21,10 @@ arrowspeed = 0.03
 fireballspeed = 0.02
 alarm[0] = 1;
 maxElixir = 10;
+rocketspeed = 0.01
+rocketradius = 120
+rocketdmg = 1484
+rockettowerdmg = 371
 elixirgeneration = 168;
 
 cards = [];

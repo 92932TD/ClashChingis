@@ -26,6 +26,10 @@ fireballdmg = 688
 fireballradius = 150
 arrowspeed = 0.03
 fireballspeed = 0.02
+rocketspeed = 0.01
+rocketradius = 120
+rocketdmg = 1484
+rockettowerdmg = 371
 
 
 

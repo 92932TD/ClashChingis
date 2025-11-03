@@ -32,7 +32,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sChadwick",
+    "path": "sprites/sChadwick/sChadwick.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

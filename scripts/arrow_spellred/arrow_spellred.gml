@@ -8,8 +8,7 @@ function arrow_spellred(xx, yy, radius, damage, towerdamage, spd) {
         buffer_write(buffer_out, buffer_s32, damage);
         buffer_write(buffer_out, buffer_s32, towerdamage);
 		buffer_write(buffer_out, buffer_f32, spd);
-		log_message("SPD before buffer: " + string(spd))
-
+		
 
         network_send_packet(global.Client_Socket, buffer_out, buffer_tell(buffer_out));
         buffer_delete(buffer_out);

@@ -1,5 +1,6 @@
 function arrow_spell(xx, yy, radius, damage, towerdamage, spd) {
-    var proj = instance_create_layer(480, 1620, "Instances", oProjectile);
+	show_debug_message("Created spell")
+    var proj = instance_create_layer(480, 1620, "Instances_Cards", oProjectile);
     proj.start_x = 480
     proj.start_y = 1620;
     proj.target_x = xx
@@ -12,5 +13,7 @@ function arrow_spell(xx, yy, radius, damage, towerdamage, spd) {
 		proj.sprite_index = sFireball
 	} else if radius = 210 {
 		proj.sprite_index = sBlueArrowInHand
+	} else if radius = 120 {
+		proj.sprite_index = sRocket
 	}
 }
