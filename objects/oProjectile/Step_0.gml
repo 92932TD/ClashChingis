@@ -1,3 +1,4 @@
+if !is_network_clone {
 t += spd;
 if (t > 1) t = 1;
 
@@ -16,4 +17,5 @@ if (t >= 1) {
     }
 	show_debug_message("Destroyed projectile")
     instance_destroy();
+}
 }

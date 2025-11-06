@@ -35,12 +35,17 @@ if (global.Client_Socket != -1) {
 	 with (oProjectile) {
         var buf = buffer_create(128, buffer_fixed, 1);
 show_debug_message("Writing sum projectile code")
-        buffer_write(buf, buffer_u8, 670); 
+show_debug_message("Client Socket: " + string(global.Client_Socket));
+
+show_debug_message("Projectile send: id=" + string(id_network) + " x=" + string(x) + " y=" + string(y));
+
+        buffer_write(buf, buffer_u8, 110); 
         buffer_write(buf, buffer_s32, id_network); 
         buffer_write(buf, buffer_s32, x);
         buffer_write(buf, buffer_s32, y);
-       
+		buffer_write(buf, buffer_s32, sprite_index);
         network_send_packet(global.Client_Socket, buf, buffer_tell(buf));
         buffer_delete(buf);
+		show_debug_message("Sent proj packet")
     }
 }

@@ -8,9 +8,11 @@ if (type == network_type_data) {
 
     if (buffer_exists(buffer_in)) {
 		
+		
         buffer_seek(buffer_in, buffer_seek_start, 0);
 
         var command = buffer_read(buffer_in, buffer_u8);
+		log_message("Async received command byte: " + string(command));
 
         if (command == 100) { // position packet
             var net_id = buffer_read(buffer_in, buffer_s32); 
@@ -76,6 +78,7 @@ if (type == network_type_data) {
              
         }
 		if (command == 200) { // destroy packet
+			show_debug_message("Recieved destroy package")
     var net_id = buffer_read(buffer_in, buffer_s32);
 
     // Find instance with this network id
@@ -90,14 +93,15 @@ if (type == network_type_data) {
         
     }
 }
-if (command == 670) {
+if (command == 110) {
 	log_message("Recieved command 670")
     var proj_id = buffer_read(buffer_in, buffer_s32);
     var px = buffer_read(buffer_in, buffer_s32);
     var py = buffer_read(buffer_in, buffer_s32);
+	var sprite = buffer_read(buffer_in, buffer_s32);
     
    
-var reflected_py = room_height -240 - new_y 
+var reflected_py = room_height -240 - py 
     // Find existing projectile instance
     var proj_inst = noone;
     var count = instance_number(oProjectile);
@@ -114,12 +118,14 @@ var reflected_py = room_height -240 - new_y
         proj_inst = instance_create_layer(px, py, "Instances", oProjectile);
         proj_inst.id_network = proj_id;
         proj_inst.is_network_clone = true;
+		proj_inst.sprite_index = sprite
     }
 
   
     proj_inst.x = px;
     proj_inst.y = reflected_py;
-    proj_inst.target_id = target_id;
+	
+    
     
 }
 
