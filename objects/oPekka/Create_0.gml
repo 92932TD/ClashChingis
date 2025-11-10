@@ -4,6 +4,7 @@ max_hp = hp;
 dmg = 816;
 atk_interval = 0
 base_atk = 108;
+deploytime = 60
 target = noone;
 is_network_clone = false
 range = 57.6;

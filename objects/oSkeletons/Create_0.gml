@@ -9,6 +9,7 @@ cooldown = false
 last_shot_time = 0
 is_network_clone = false
 cooldown = false
+deploytime = 60
 base_atk = 66;
 target = noone;
 range = 30;

@@ -1,5 +1,6 @@
 istargetable = true
 hp = 721;
+deploytime = 60
 max_hp = hp;
 dmg = 217;
 atk_interval = 60

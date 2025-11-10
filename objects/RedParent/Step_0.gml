@@ -14,7 +14,7 @@ if (hp <= 0) {
     instance_destroy();
 }
 
-
+if deploytime <= 0 {
 
 if 1 = 1 {	
 	var dist = 100000
@@ -66,3 +66,4 @@ if (target != noone && (!instance_exists(target) || (variable_instance_exists(ta
     target = noone;
     path_end();
 }
+} else deploytime -= 1 

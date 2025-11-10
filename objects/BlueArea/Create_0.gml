@@ -25,4 +25,4 @@ mp_grid_add_instances(path_grid, oBluePrincess, false);
 mp_grid_add_instances(path_grid, oWater, false);
 mp_grid_add_instances(path_grid, oWhite, false);
 path1 = path_add()
-
+deploytime = 60

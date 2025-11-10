@@ -12,6 +12,7 @@ isBuilding = false
 grid_size = 15;
 spd = 2;
 isRed = true
+deploytime = 60
 path_grid = mp_grid_create(
     0,
     0,

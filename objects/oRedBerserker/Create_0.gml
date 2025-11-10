@@ -1,3 +1,4 @@
+deploytime = 60
 istargetable = true
 grid_size = 15
 hp = 896;

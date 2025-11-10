@@ -1,3 +1,4 @@
+deploytime = 60
 istargetable = true
 hp = 81;
 max_hp = hp;

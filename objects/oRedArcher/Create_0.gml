@@ -4,6 +4,7 @@ max_hp = hp;
 is_network_clone = false
 dmg = 112;
 atk_interval = 54
+deploytime = 60
 base_atk = 54;
 target = noone;
 id_network = id

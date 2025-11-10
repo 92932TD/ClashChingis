@@ -5,7 +5,8 @@ global.song_list = [
     song_25, song_26, song_27, song_28, song_29, song_30, song_31, ukelele,
 	Sound33, Sound34, Sound35, Sound36, Sound37, Sound38, Sound39, Sound40, 
 	Sound41, Sound42, Sound43, Sound44, Sound45, Sound46, Sound47, Sound48,
-	agartha, Sound50, dieveryrough
+	agartha, Sound50, dieveryrough, Sound52, Sound53, Sound54, Sound55, Sound56,
+	Sound57, Sound58
 ];
 
 global.current_song = -1; 

@@ -8,6 +8,7 @@ if room = RoomPlayer1 {
 if (hp <= 0) {
 	
     instance_destroy();
+	exit;
 	
 }
 hp -= lifespan
