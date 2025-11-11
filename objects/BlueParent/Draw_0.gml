@@ -20,3 +20,17 @@ draw_set_colour(c_white)
 draw_set_alpha(1)
 
 
+if deploytime > 0 {
+draw_set_alpha(0.8)
+
+draw_set_colour(c_green)
+draw_circle(x, y, sprite_width / 2, false)
+
+draw_set_colour(c_red)
+draw_circle(x, y, (deploytime / sprite_width) * (sprite_width / 2), false)
+draw_set_colour(c_white)
+draw_set_alpha(1)
+}
+
+
+
