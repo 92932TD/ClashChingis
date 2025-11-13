@@ -1,20 +1,29 @@
 if !is_network_clone {
-t += spd
-if (t > 1) t = 1
+    var dist_total = point_distance(start_x, start_y, target_x, target_y);
+    var steps_total = 1 / spd; 
+    var move_speed = dist_total / steps_total;
 
-x = lerp(start_x, target_x, t)
-y = lerp(start_y, target_y, t)
+    var dir = point_direction(x, y, target_x, target_y);
+    var dist = point_distance(x, y, target_x, target_y);
 
-if (t >= 1) {
-    with (BlueParent) {
-        if (point_distance(x, y, other.target_x, other.target_y) <= other.radius) {
-            if isBuilding {
-                hp -= other.towerdamage
-            } else {
-                hp -= other.damage
+    if (dist > move_speed) {
+        x += lengthdir_x(move_speed, dir);
+        y += lengthdir_y(move_speed, dir);
+    } else {
+        x = target_x;
+        y = target_y;
+
+        with (BlueParent) {
+            if (point_distance(x, y, other.target_x, other.target_y) <= other.radius) {
+                if isBuilding {
+                    hp -= other.towerdamage;
+                } else {
+                    hp -= other.damage;
+                }
             }
         }
+
+        show_debug_message("Destroyed projectile");
+        instance_destroy();
     }
-    instance_destroy()
-}
 }

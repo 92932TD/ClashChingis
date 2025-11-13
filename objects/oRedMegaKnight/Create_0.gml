@@ -43,13 +43,14 @@ end_y = y;
 landing_x = x;
 landing_y = y;
 landing_radius = 120;
+knockback = 12
 
 
 
 with (BlueParent) {
 	var spawn_radius = 120;
  var spawn_damage = 598;
-	var knockback = 12
+	
     var d = point_distance(x, y, other.x, other.y);
     if (d <= spawn_radius) {
         if (variable_instance_exists(id, "hp")) {

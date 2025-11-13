@@ -1,9 +1,10 @@
+if deploytime <= 0 {
 if (hp <= 0) {
     show_debug_message("Destroyed: HP <= 0");
     instance_destroy();
 }
 
-if (jump_cooldown_timer > 0) jump_cooldown_timer -= 1;
+jump_cooldown_timer = 0
 
 var dist = 100000;
 var nearesttarget = noone;
@@ -28,12 +29,22 @@ if is_jumping && !is_network_clone {
     x = lerp(start_x, end_x, t);
     y = lerp(start_y, end_y, t) - (4 * t * (1 - t) * jump_height);
 
-    if (instance_exists(target)) {
-        end_x = target.x;
-        end_y = target.y;
-        landing_x = end_x;
-        landing_y = end_y;
-    }
+   if (instance_exists(target)) {
+    var dir = point_direction(x, y, target.x, target.y)
+
+  
+    var target_radius = max(target.sprite_width, target.sprite_height) * 0.5;
+
+   
+    var offset = target_radius
+
+    end_x = target.x + lengthdir_x(offset, dir);
+    end_y = target.y + lengthdir_y(offset, dir);
+
+    landing_x = end_x;
+    landing_y = end_y;
+}
+
 
     if (jump_progress >= jump_duration) {
         show_debug_message("Landed from jump");
@@ -70,7 +81,7 @@ if is_jumping && !is_network_clone {
     }
 
     if (target != noone && (!instance_exists(target) || (variable_instance_exists(target, "hp") && target.hp <= 0))) {
-        show_debug_message("Target lost during jump");
+       
         target = noone;
         path_end();
     }
@@ -83,11 +94,11 @@ if is_jumping && !is_network_clone {
 
 if target != noone {
     var distt = point_distance(x, y, target.x, target.y);
-    show_debug_message("Target found, distance = " + string(distt));
+  
 
     if (distt > range) {
         if (!is_jumping) {
-            show_debug_message("Moving toward target");
+       
             mp_grid_path(path_grid, path1, x, y, target.x, target.y, true);
             path_start(path1, spd, path_action_stop, false);
         }
@@ -119,8 +130,9 @@ if target != noone {
             with (RedParent) if (id != unit) {
                 var dir_to_me = point_direction(unit.x, unit.y, x, y);
                 var angle_diff = angle_difference(dir_to_target, dir_to_me);
-                if (abs(angle_diff) <= 60) {
-                    show_debug_message("Target within 60° arc, attack confirmed");
+				var dist_to_me = point_distance(unit.x, unit.y, x, y)
+                if (abs(angle_diff) <= 60) && dist_to_me <= other.range + sprite_width{
+                   hp -= dmg
                 }
             }
 
@@ -129,7 +141,7 @@ if target != noone {
             cooldown = true;
             alarm[0] = atk_interval;
         } else {
-            show_debug_message("Attack on cooldown");
+            
         }
     }
 } else {
@@ -144,3 +156,4 @@ if (target != noone && (!instance_exists(target) || (variable_instance_exists(ta
     target = noone;
     path_end();
 }
+} else deploytime -= 1
